@@ -1,0 +1,16 @@
+<form [formGroup]="forma">
+    <mat-form-field>
+        <mat-label>Título</mat-label>
+        <input matInput placeholder="Título" formControlName="titulo">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Descripción</mat-label>
+        <textarea rows="3" matInput placeholder="Descripción" formControlName="desc"></textarea>
+    </mat-form-field>
+
+    <!--La información de cada boton se emite para el componente padre-->
+    <button (click)="guardarCambios()" mat-raised-button color="primary">Editar</button>
+    <button (click)="onNoClick()" type="button" mat-raised-button color="warn">Cancelar</button>
+
+</form>
